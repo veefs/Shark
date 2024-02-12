@@ -23,44 +23,31 @@ int RenderOptions() {
     cout << CYAN << R"(
                                  ,-                                             | Welcome to Shark, Shark is a Valorant cheat
                                ,'::|                                            | -------------------------------------------
-                              /::::|                                            | help - lists all commands
-                            ,'::::o\                                      _..   | trigger-bot-enable - enables triggerbot
-         ____........-------,..::?88b                                  ,-' /    | list-settings - lists settings
- _.--"""". . . .      .   .  .  .  ""`-._                           ,-' .;'     | 
-<. - :::::o......  ...   . . .. . .  .  .""--._                  ,-'. .;'       | 
- `-._  ` `":`:`:`::||||:::::::::::::::::.:. .  ""--._ ,'|     ,-'.  .;'         | 
-     """_=--       //'doo.. ````:`:`::::::::::.:.:.:. .`-`._-'.   .;'           |
-         ""--.__     P(       \               ` ``:`:``:::: .   .;'             |
-                "\""--.:-.     `.                             .:/               |
-                  \. /    `-._   `.""-----.,-..::(--"".\""`.  `:\               |
-                   `P         `-._ \          `-:\          `. `:\              |
-                                   ""            "            `-._)             |
+                              /::::|                                            | trigger-bot-enable - enables triggerbot
+                            ,'::::o\                                      _..   | settings - lists settings
+         ____........-------,..::?88b                                  ,-' /    
+ _.--"""". . . .      .   .  .  .  ""`-._                           ,-' .;'     
+<. - :::::o......  ...   . . .. . .  .  .""--._                  ,-'. .;'       
+ `-._  ` `":`:`:`::||||:::::::::::::::::.:. .  ""--._ ,'|     ,-'.  .;'         
+     """_=--       //'doo.. ````:`:`::::::::::.:.:.:. .`-`._-'.   .;'           
+         ""--.__     P(       \               ` ``:`:``:::: .   .;'             
+                "\""--.:-.     `.                             .:/               
+                  \. /    `-._   `.""-----.,-..::(--"".\""`.  `:\               
+                   `P         `-._ \          `-:\          `. `:\              
+                                   ""            "            `-._)             
     )" << RESET << std::endl;
 
     std::cout << BLUE << ">" << RESET;
     cin >> input;
 
-    if(input == "help") {
-        system("CLS");
-        std::cout << "commands" << endl;
-        std::cout << "--------------------------------------" << endl;
-        std::cout << ">help" << endl;
-        std::cout << ">trigger-bot-enable" << endl;
-        std::cout << ">load-settings" << endl;
-        std::cout << ">lists-settings" << endl;
-        std::cout << ">rgb-change" << endl;
-        Sleep(2000);
-        system("CLS");
-        RenderOptions();
-    }
 
-    else if(input == "trigger-bot-enable") {
+    if(input == "trigger-bot-enable") {
         system("CLS");
         std::cout << GREEN << "[TRIGGER-BOT-ENABLED]" << RESET << endl;
         TriggerBot("true", "255,255,255");
     }
 
-    else if(input == "list-settings") {
+    else if(input == "settings") {
 
         system("CLS");
         std::cout << "settings" << endl;
